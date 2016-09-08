@@ -1,0 +1,185 @@
+/* Variables*/
+$primary-color: #0070d6;
+$primary-color-light: #2196f3;
+$alternate-color: #0193ab;
+$accent-color-light: #f48eb1;
+
+$text-white: #fff;
+
+$header-navbar-color: $text-white;
+
+$header-navbar-height: 4.571em;
+
+$loading-spinner: "/assets/img/loading_spinner.gif";
+$footer-bg-image: "/assets/img/footer.jpg";
+/* End of variables*/
+
+/* General*/
+.margin-top-0-5 {
+  margin-top: 0.5em;
+}
+.margin-top-1 {
+  margin-top: 1em;
+}
+.margin-bottom-1 {
+  margin-bottom: 1em;
+}
+.margin-0-5 {
+  margin: 0.5em;
+}
+.padding-1 {
+  padding: 1em;
+}
+.clear {
+  clear: both;
+}
+.section-title-line {
+  display: table;
+  height: 2px;
+  width: 54px;
+  background-color: $primary-color-light;
+  margin: 0 auto;
+  margin-bottom: 15px;
+}
+.section-title-line-inverse {
+  display: table;
+  height: 2px;
+  width: 54px;
+  background-color: #fff;
+  margin: 0 auto;
+  margin-bottom: 15px;
+}
+
+/* Colors */
+.style-default-light .has-error .input-group-addon {
+  border-color: #f2f2f3 !important;
+}
+
+.border-bottom-accent-light {
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  border-bottom-color: $accent-color-light;
+}
+
+/* Shadow */
+.modal-backdrop {
+  position: fixed;
+  bottom: 0;
+}
+.shadow-bottom-light {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.33);
+  border-color: #fff !important;
+}
+.section-shadow {
+  box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.33), 0 -1px 8px 0 rgba(0, 0, 0, 0.33);
+  z-index: 15;
+}
+.section-shadow-top {
+  box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.33), 0 -1px 8px 0 rgba(0, 0, 0, 0.33);
+  z-index: 20;
+}
+article a {
+  color: $primary-color-light;
+  &:hover, &:focus {
+    color: $primary-color;
+  }
+}
+.has-error .input-group-addon {
+  color: inherit;
+  border-color: #fff;
+  background-color: inherit;
+}
+.banner-overlay-shade-top {
+  background-image: linear-gradient(180deg,hsla(0,0%,5%,.2) 0,hsla(0,0%,5%,0));
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#990c0c0c',endColorstr='#000c0c0c',GradientType=0);
+}
+.banner-overlay-shade-bottom {
+  background-image: linear-gradient(180deg,hsla(0,0%,5%,0) 0,hsla(0,0%,5%,.1));
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000c0c0c',endColorstr='#990c0c0c',GradientType=0);
+}
+
+/* Navbar */
+#header.header-navbar {
+  background-color: $primary-color;
+  border-color: $primary-color;
+  color: $header-navbar-color;
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.33);
+  ul .menu-item {
+    padding: 0;
+    a {
+      position: relative;
+      min-height: 100%;
+      padding: 12px;
+      line-height: 40px;
+      border-left: 1px solid transparent;
+      border-right: 1px solid transparent;
+      &:hover, &:focus {
+        text-decoration: none;
+        background-color: rgba(12, 12, 12, 0.07);
+      }
+    }
+  }
+}
+.header-nav>.dropdown {
+  margin-left: -18px;
+}
+@media screen and (min-width: 1460px) {
+  #header.header-navbar {
+    font-size: 18px;
+  }
+}
+.header-nav .open>a, .header-nav .open>a:focus, .header-nav .open>a:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Image */
+.img-7 {
+  width: 7em;
+  height: 7em;
+}
+
+.img-icon {
+  height: 5.692em;
+  width: 5.692em;
+}
+
+.img-avatar {
+  cursor: pointer;
+}
+
+.loading-spinner {
+  background: url($loading-spinner);
+  z-index: 900;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.slick-carousel { display: none; }
+
+.slick-carousel.slick-initialized { display: block; }
+
+/* Card */
+.card .card-content {
+  padding: 2em 1em;
+}
+.card.style-alternate, .card .style-alternate, section.style-alternate, section .style-alternate {
+  background-color: $alternate-color;
+  border-color: $alternate-color;
+  color: #fff;
+}
+
+/* Footer */
+.footer {
+  .img-footer {
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+}
+.footer footer{
+  background: $primary-color;
+}
