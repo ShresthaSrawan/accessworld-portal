@@ -9,12 +9,12 @@
         @endforeach
     </section>
 @else
-    <section class="full-bleed">
-        <div class="section-body style-default-dark text-shadow">
-            <div class="img-backdrop" style="background-image: url('{{ is_null($banner) ? asset('assets/img/avatar_slider.png') : asset($banner->path) }}')"></div>
-            <div class="overlay banner-overlay-shade-top stick-top-left height-3"></div>
-            <div class="row" style="height: 248px"></div>
-            <div class="overlay banner-overlay-shade-bottom stick-bottom-left force-padding text-right"></div>
-        </div><!--end .section-body -->
-    </section>
+    {{--<section class="full-bleed">--}}
+        {{--<div class="section-body style-default-dark text-shadow">--}}
+            {{--<div class="img-backdrop" style="background-image: url('{{ is_null($banner) ? asset('assets/img/avatar_slider.png') : asset($banner->path) }}')"></div>--}}
+            {{--<div class="overlay banner-overlay-shade-top stick-top-left height-3"></div>--}}
+            {{--<div class="row" style="height: 248px"></div>--}}
+            {{--<div class="overlay banner-overlay-shade-bottom stick-bottom-left force-padding text-right"></div>--}}
+        {{--</div><!--end .section-body -->--}}
+    {{--</section>--}}
 @endif

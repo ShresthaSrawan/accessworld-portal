@@ -56,4 +56,8 @@ elixir(function(mix) {
         'AppToast.js',
         'AppVendor.js'
     ], 'public/assets/js/dep.js');
+
+    mix.scripts([
+        'node_modules/vue/dist/vue.js'
+    ], 'public/assets/js/vue.js', './')
 });

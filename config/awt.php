@@ -6,6 +6,7 @@ return [
         'address' => '5F Bhatbhateni, Krishna Galli',
         'phone' => '(+977) 9801 000 575'
     ],
+    'currency'    => 'Rs. ',
     'terms' => [
         'all' => [
             '1' => '1 Month',

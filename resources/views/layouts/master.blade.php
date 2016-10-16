@@ -78,6 +78,6 @@
 
         });
     </script>
-    @yield("footer")
+    @stack("scripts")
 </body>
 </html>

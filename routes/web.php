@@ -13,11 +13,31 @@
 
 Route::get('/', 'HomeController@index');
 
-// domain routes
-Route::post('service/domain', 'DomainController@index')->name('service.domain.index');
-
-Route::get('about', 'AboutPageController@index')->name('about.index');
-
 Route::get('cart', 'CartController@index')->name('cart.index');
 
-Route::get('service', 'ServicePageController@index')->name('service.index');
+Route::get('page/{page}', 'PageController@show')->name('page.show');
+
+Route::group(['as' => 'service.', 'prefix' => 'service'], function ()
+{
+    Route::group(['prefix' => '{service}'], function ()
+    {
+        Route::get('', 'ServiceController@show')->name('show');
+
+        Route::group(['as' => 'package.', 'prefix' => 'package/{package}'], function ()
+        {
+            Route::get('', 'ServiceController@package')->name('show');
+            Route::get('order', 'ServiceController@orderPackage')->name('order');
+            Route::post('order', 'ServiceController@orderPackage')->name('store');
+            Route::get('price', 'ServiceController@packagePrice')->name('price');
+        });
+
+        // vps custom
+        Route::group(['as' => 'custom.', 'prefix' => 'custom'], function ()
+        {
+            Route::get('', 'ServiceController@custom')->name('create');
+            Route::post('', 'ServiceController@customStore')->name('store');
+
+            Route::get('price', 'ServiceController@price')->name('price');
+        });
+    });
+});

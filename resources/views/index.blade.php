@@ -19,7 +19,7 @@
     <section class="style-default-light">
         <div class="row"> 
             <div class="col-sm-8 col-sm-offset-2" >
-                {{ Form::open( [ 'route' => 'service.domain.index', 'class' => 'form domain-validate', 'role' => 'form', 'novalidate' ] ) }}
+                {{ Form::open( [ 'route' => ['service.show', 'domain'], 'class' => 'form domain-validate', 'role' => 'form', 'novalidate' ] ) }}
                 <div class="form-group">
                     <div class="input-group">
                         <span class="input-group-addon"><h2 class="text-light no-margin">Get Your Domain:</h2></span>

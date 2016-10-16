@@ -23,8 +23,10 @@ class RouteServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
-
+        Route::bind('package', function ($value, $route) {
+            $packageClass = 'App\Models\\'.ucwords(camel_case($route->service)).'Package';
+            return $packageClass::whereSlug($value)->first();
+        });
         parent::boot();
     }
 

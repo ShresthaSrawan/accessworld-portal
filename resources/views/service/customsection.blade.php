@@ -7,7 +7,7 @@
                     <strong>No problem! </strong> Get your <strong>custom plan</strong> now!
                 </div>
                 <div class="col-xs-12 text-center col-sm-5">
-                    <a class="btn btn-accent ink-reaction pull-right" href="{{ route('service.'.$service->slug.'.custom.create') }}" style="margin-top: 0.6em;">
+                    <a class="btn btn-accent ink-reaction pull-right" href="{{ route('service.custom.create', $service->slug) }}" style="margin-top: 0.6em;">
                         Get a custom plan now
                     </a>
                 </div>

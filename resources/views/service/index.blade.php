@@ -2,10 +2,10 @@
 
 @section('title','Services')
 
-@section('meta:description', $servicePage->short_description)
+@section('meta:description', $page->short_description)
 @section('og:title', 'VPS Hosting Services')
-@section('og:description', $servicePage->short_description)
-@section('og:image', !$servicePage->image ?: asset($servicePage->image->path))
+@section('og:description', $page->short_description)
+@section('og:image', !$page->image ?: asset($page->image->path))
 @section('og:width', '720')
 @section('header')
     <style>
@@ -185,7 +185,7 @@
             <div class="cloud"></div>
         </div>
     </div>
-    @include('commons.banner', [ 'banner' => $servicePage->image] )
+    @include('commons.banner', [ 'banner' => $page->image] )
 
     <section class="section-shadow">
         <div class="container">

@@ -52,7 +52,7 @@
                 <p class="text-justify text-lg">{!! strip_tags($homePage->description) !!}</p>
             </div>
             <div>
-                <a href="{{ route('about.index') }}" class="btn btn-accent btn-raised ink-reaction pull-right">Read More</a>
+                <a href="{{ route('page.show', 'about') }}" class="btn btn-accent btn-raised ink-reaction pull-right">Read More</a>
             </div>
         </div>
     @else
@@ -61,7 +61,7 @@
             <div>
                 <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus consequuntur, distinctio doloremque eos fugiat fugit laborum molestiae nesciunt officiis optio pariatur perspiciatis soluta unde voluptate voluptates. Accusantium adipisci alias aliquid cumque delectus dicta, dolore dolorum ducimus eaque est eveniet expedita impedit ipsam molestiae odit perferendis perspiciatis quas unde vel voluptatibus.</p>
             </div>
-            <a href="{{ route('about.index') }}" class="btn btn-accent btn-raised ink-reaction pull-right">Read More</a>
+            <a href="{{ route('page.show','about') }}" class="btn btn-accent btn-raised ink-reaction pull-right">Read More</a>
         </div>
     @endif
 </div>

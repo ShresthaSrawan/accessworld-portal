@@ -10,18 +10,18 @@
 
 @section('body')
 
-  @include('commons.banner', [ 'banner' => $servicePage->image, 'banners' => $service->banner ] )
+  @include('commons.banner', [ 'banners' => $service->banner ] )
 
   <section>
     <div class="container">
       <div class="row">
         <div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2">
-          {{ Form::open([ 'route' => 'service.vps.custom.store', 'class' => 'form form-validate', 'novalidate' , 'data-url' => route('service.vps.custom.price'), 'id' => 'form-custom-plan']) }}
+          {{ Form::open([ 'route' => ['service.custom.store', $service->slug], 'class' => 'form form-validate', 'novalidate' , 'data-url' => route('service.custom.price', $service->slug), 'id' => 'form-custom-plan']) }}
             <div class="card">
               <div class="card-head">
                 <header class="custom-title">Make a VPS Custom Plan</header>
               </div>
-              @include('services.vps.customForm')
+              @include('service.vps.customForm')
             </div>
           {{ Form::close() }}
         </div>

@@ -12,7 +12,7 @@ return [
     | any other location as required by the application or its packages.
     */
 
-    'name' => 'My Application',
+    'name' => 'AccessWorld',
 
     /*
     |--------------------------------------------------------------------------
@@ -166,8 +166,9 @@ return [
         /*
          * Package Service Providers...
          */
-
-        //
+        Intervention\Image\ImageServiceProvider::class,
+        Collective\Html\HtmlServiceProvider::class,
+        App\Providers\CartServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -177,9 +178,6 @@ return [
         App\Providers\AuthServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-
-        Collective\Html\HtmlServiceProvider::class,
-        App\Providers\CartServiceProvider::class,
 
     ],
 
@@ -229,7 +227,8 @@ return [
         'View'         => Illuminate\Support\Facades\View::class,
         'Form'         => Collective\Html\FormFacade::class,
         'Html'         => Collective\Html\HtmlFacade::class,
-        'Cart'         => App\Facades\Cart::class
+        'Cart'         => App\Facades\Cart::class,
+        'Image'        => Intervention\Image\Facades\Image::class,
     ],
 
 ];

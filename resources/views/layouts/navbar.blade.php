@@ -38,9 +38,11 @@
         </div>
         <div class="headerbar-right hidden-xs hidden-sm">
             <ul class="header-nav header-nav-options">
-                <li class="menu-item">
-                    <a href="#">Menu</a>
-                </li>
+                @foreach( menus() as $menu)
+                    <li class="menu-item">
+                        <a href="{{ $menu->url }}">{{ $menu->name }}</a>
+                    </li>
+                @endforeach
                 @unless($user = Auth::user())
                     <li class="menu-item">
                         <a href="{{ url('login') }}">Login</a>

@@ -15,7 +15,7 @@
               No Items in Cart.
             </div>
             <div class="col-sm-12 text-center">
-              <a class="btn btn-primary btn-sm ink-reaction btn-flat" href="{{ route('service.index') }}">View Services</a>
+              <a class="btn btn-primary btn-sm ink-reaction btn-flat" href="{{ route('page.show', 'service') }}">View Services</a>
             </div>
           </div>
         </li>
